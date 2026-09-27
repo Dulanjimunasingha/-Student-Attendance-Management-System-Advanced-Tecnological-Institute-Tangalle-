@@ -1,0 +1,701 @@
+/**
+ * Custom CSS
+ * Advanced Technological Institute of Tangalle - Attendance Management System
+ */ 
+
+/* =====================================================
+   GLOBAL STYLES
+   ===================================================== */
+
+:root {
+    --primary-color: #0d6efd;
+    --primary-dark: #0a58ca;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --sidebar-width: 260px;
+    --navbar-height: 60px;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.btn {
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-sm {
+    padding: 4px 12px;
+    font-size: 13px;
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #000;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 16px 20px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* =====================================================
+   STAT CARDS
+   ===================================================== */
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.stat-card .stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-bg);
+    line-height: 1.2;
+}
+
+.stat-card .stat-label {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-top: 4px;
+}
+
+.stat-card .stat-trend {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.stat-card .stat-trend.up {
+    color: var(--success-color);
+}
+
+.stat-card .stat-trend.down {
+    color: var(--danger-color);
+}
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: var(--light-bg);
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--secondary-color);
+    padding: 12px 16px;
+}
+
+.table tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table-actions {
+    display: flex;
+    gap: 6px;
+}
+
+/* =====================================================
+   FORMS
+   ===================================================== */
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.form-control,
+.form-select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.form-control.is-invalid {
+    border-color: var(--danger-color);
+}
+
+.invalid-feedback {
+    font-size: 12px;
+}
+
+.input-group-text {
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+/* =====================================================
+   BADGES & TAGS
+   ===================================================== */
+
+.badge {
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 11px;
+    border-radius: 6px;
+}
+
+.badge.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning-color) !important;
+    color: #000 !important;
+}
+
+.badge.bg-info {
+    background-color: var(--info-color) !important;
+    color: #000 !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+/* =====================================================
+   PROGRESS BARS
+   ===================================================== */
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 5px;
+    transition: width 0.6s ease;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+/* =====================================================
+   MODALS
+   ===================================================== */
+
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 16px 24px;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 16px 24px;
+}
+
+/* =====================================================
+   ALERTS
+   ===================================================== */
+
+.alert {
+    border: none;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+}
+
+.alert-dismissible {
+    padding-right: 42px;
+}
+
+.alert-dismissible .btn-close {
+    padding: 16px;
+}
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.nav-tabs {
+    border-bottom: 2px solid #eee;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background: transparent;
+}
+
+/* =====================================================
+   PAGINATION
+   ===================================================== */
+
+.pagination {
+    gap: 4px;
+}
+
+.page-link {
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.sidebar-brand {
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand h4 {
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    font-size: 20px;
+}
+
+.sidebar-brand small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+}
+
+.sidebar-menu .nav-link {
+    border-radius: 8px;
+    margin: 2px 10px;
+    padding: 12px 18px;
+}
+
+.sidebar-menu .nav-link i {
+    width: 22px;
+    text-align: center;
+}
+
+/* =====================================================
+   TOP NAVBAR
+   ===================================================== */
+
+.top-navbar {
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.user-avatar {
+    background: linear-gradient(135deg, var(--primary-color), #0a58ca);
+}
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.page-header {
+    background: #fff;
+    padding: 20px 28px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.page-header h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.page-header .breadcrumb {
+    margin: 6px 0 0;
+    font-size: 13px;
+}
+
+/* =====================================================
+   ATTENDANCE STATUS
+   ===================================================== */
+
+.attendance-present {
+    color: var(--success-color);
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.attendance-absent {
+    color: var(--danger-color);
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.attendance-late {
+    color: var(--warning-color);
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.attendance-excused {
+    color: var(--info-color);
+    background-color: rgba(13, 202, 240, 0.1);
+}
+
+/* =====================================================
+   EMPTY STATES
+   ===================================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state i {
+    font-size: 64px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.empty-state h4 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #999;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   LOADING STATES
+   ===================================================== */
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-card .stat-value {
+        font-size: 24px;
+    }
+
+    .table-responsive {
+        font-size: 13px;
+    }
+}
+
+/* =====================================================
+   PRINT STYLES
+   ===================================================== */
+
+@media print {
+
+    .sidebar,
+    .top-navbar,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .page-header {
+        box-shadow: none;
+        border-bottom: 2px solid #ddd;
+    }
+}
+
+/* =====================================================
+   CUSTOM SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.text-warning {
+    color: var(--warning-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded-lg {
+    border-radius: 12px !important;
+}
